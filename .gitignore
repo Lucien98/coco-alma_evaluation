@@ -3,3 +3,10 @@ __pycache__
 .idea
 tmp/*
 !tmp/.keep
+result
+keccak_NF1
+cms_and
+aes_sbox_cms
+aes_dom_wrapper
+aes_NoFresh
+tmp

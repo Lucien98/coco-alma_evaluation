@@ -1,0 +1,13 @@
+q = 0x11^0x57
+print("%x" % q)
+x0 = 0x69
+x1 = 0x0e
+y0 = 0x73
+y1 = 0xb5
+
+x = x0 ^ x1
+y = y0 ^ y1
+
+q = x & y
+
+print("%x" % q)

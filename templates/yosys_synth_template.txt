@@ -1,6 +1,6 @@
 {READ_FILES}
 
-{KEEP}
+# {KEEP}
 synth -flatten -noabc -top {TOP_MODULE};
 techmap; dffunmap;
 rename -enumerate *; clean;

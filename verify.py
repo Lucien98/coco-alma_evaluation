@@ -67,7 +67,7 @@ def parse_arguments():
                         required=False, default="rst_i",
                         help="Name of the reset signal (default: %(default)s)")
     parser.add_argument("-s", "--rst-cycles", dest="rst_cycles",
-                        required=False, default=2, type=helpers.ap_check_positive,
+                        required=False, default=2, type=helpers.ap_check_natural,
                         help="Number of cycles where reset signal is triggered (default: %(default)s)")
     parser.add_argument("-p", "--rst-phase", dest="rst_phase",
                         required=False, default="1", choices=BIN_STR,

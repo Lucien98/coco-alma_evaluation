@@ -5,3 +5,4 @@ pytest
 pytest-timeout
 pytest-html
 matplotlib
+termcolor

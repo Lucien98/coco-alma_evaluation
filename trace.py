@@ -45,6 +45,8 @@ def parse_arguments():
                         help="Number of cores used for the make command")
     parser.add_argument("-o", "--output-bin", dest="output_bin_path",
                         required=False, default=None)
+    parser.add_argument("-d", "--tmp-dir", dest="tmp_dir",
+                        required=False, default=None)
  
     args, _ = parser.parse_known_args()
     
@@ -86,6 +88,8 @@ def run_with_log(command, cwd=False):
 
 def check_run(command, message, cwd=False):
     ret, out, err = run_with_log(command, cwd)
+    print(out)
+    print(err)
     if ret != 0 or "error" in (out + err).lower():
         print(out)
         print(err)
@@ -105,11 +109,13 @@ def get_verilator_include_path():
 
 
 def trace_verilator(args):
+    defines.TMP_DIR = args.tmp_dir
     obj_dir_path = defines.TMP_DIR + "/obj_dir"
-    
+    # obj_dir_path = defines.TMP_DIR + "/obj_dir"
+
     # tmp/circuit.v -> circuit
     raw_netlist_file_name = re.sub(r"(.*\/)", "", args.netlist_file_path).replace(".v", "")
-
+    # print(raw_netlist_file_name)
     # Find path of verilator include files
     verilator_include_path = get_verilator_include_path()
 
@@ -118,8 +124,9 @@ def trace_verilator(args):
         
         verilator_cmd = [VERILATOR, "--trace", "--trace-underscore", "--compiler", args.c_compiler, "-Wno-UNOPTFLAT", "-Wno-LITENDIAN", "-cc", args.netlist_file_path]
 
+        print(verilator_cmd)
         check_run(verilator_cmd, "ERROR: Running verilator failed.")
-
+        # exit(0);
         # Move the object directory into tmp
         shutil.rmtree(obj_dir_path, True)
         shutil.move("obj_dir", obj_dir_path)
@@ -145,11 +152,13 @@ def trace_verilator(args):
 
     output_bin_path = defines.TMP_DIR + "/" + raw_netlist_file_name if args.output_bin_path == None else args.output_bin_path
 
+    print(output_bin_path)
+
     compile_cmd = [[args.cxx_compiler], cflags, include_paths,
                    simulation_sources, ["-o", output_bin_path]]    
     
     compile_cmd = sum(compile_cmd, [])  # Flatten compile command
-
+    print(compile_cmd)
     print("3: Compiling provided verilator testbench")
     check_run(compile_cmd, "ERROR: Compiling testbench failed.")
 

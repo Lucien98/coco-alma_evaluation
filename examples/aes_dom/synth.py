@@ -12,11 +12,11 @@ TEMPLATE_FILE_PATH = TEMPLATE_DIR + "/yosys_synth_template.txt"
 
 yosys_cmd = \
 """
-docker run --rm -t 
-  -v %s:/src
-  -v %s:/tmp 
-  -w /src 
-  hdlc/ghdl:yosys 
+docker run --rm -t \
+  -v %s:/src \
+  -v %s:/tmp \
+  -w /src \
+  hdlc/ghdl:yosys \
   yosys -m ghdl /tmp/yosys_synth.ys
 """ % (DESIGN_DIR, TMP_DIR)
 
@@ -30,6 +30,8 @@ python3 %s/parse.py
 
 design_files = os.listdir(DESIGN_DIR)
 design_files = [d for d in design_files if d.endswith(".vhdl")]
+
+print(design_files)
 
 def create_yosys_script():
     yosys_script = ""
@@ -49,7 +51,9 @@ def create_yosys_script():
 
 if __name__ == "__main__":
     create_yosys_script()
+    print(yosys_cmd)
     yosys_cmd = yosys_cmd.split()
+    print(yosys_cmd)
     res = sp.run(args=yosys_cmd, capture_output=True)
     if res.returncode:
         print("Parsing failed:")

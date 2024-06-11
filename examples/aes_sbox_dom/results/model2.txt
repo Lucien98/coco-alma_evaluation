@@ -1,0 +1,136 @@
+| CircuitGraph | Total:  810 | Linear:  394 | Non-linear:  144 | Registers:  208 | Mux:    0 | 
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:21: [WARNING] Entry for name Binv1xDI already exists in namemap (Binv1xDI -> 6$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:22: [WARNING] Entry for name Binv2xDI already exists in namemap (Binv2xDI -> 7$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:23: [WARNING] Entry for name Binv3xDI already exists in namemap (Binv3xDI -> 8$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:24: [WARNING] Entry for name Bmul1xDI already exists in namemap (Bmul1xDI -> 9$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:25: [WARNING] Entry for name ClkxCI already exists in namemap (ClkxCI -> :$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:26: [WARNING] Entry for name QxDO already exists in namemap (QxDO -> ;$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:27: [WARNING] Entry for name XxDI already exists in namemap (XxDI -> <$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:28: [WARNING] Entry for name Zinv1xDI already exists in namemap (Zinv1xDI -> =$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:29: [WARNING] Entry for name Zinv2xDI already exists in namemap (Zinv2xDI -> >$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:30: [WARNING] Entry for name Zinv3xDI already exists in namemap (Zinv3xDI -> ?$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:31: [WARNING] Entry for name Zmul1xDI already exists in namemap (Zmul1xDI -> @$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:32: [WARNING] Entry for name Zmul2xDI already exists in namemap (Zmul2xDI -> A$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:33: [WARNING] Entry for name Zmul3xDI already exists in namemap (Zmul3xDI -> B$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:539: [WARNING] Entry for name rst_i already exists in namemap (rst_i -> C$)
+RST value:  0
+0
+Building formula for cycle 0: 
+vars 1 clauses 0
+Checking cycle 0:
+Checking secret 0 [192, 219]: 
+Checking secret 1 [195, 222]: 
+Checking secret 2 [198, 225]: 
+Checking secret 3 [201, 228]: 
+Checking secret 4 [204, 231]: 
+Checking secret 5 [208, 235]: 
+Checking secret 6 [213, 240]: 
+Checking secret 7 [216, 243]: 
+RST value:  0
+0
+Building formula for cycle 1: 
+vars 589 clauses 2404
+Checking cycle 1:
+Checking secret 0 [1055, 1565]: 
+Checking secret 1 [1126, 1636]: 
+Checking secret 2 [1194, 1704]: 
+Checking secret 3 [1244, 1754]: 
+Checking secret 4 [1307, 1817]: 
+Checking secret 5 [1373, 1883]: 
+Checking secret 6 [1437, 1947]: 
+Checking secret 7 [1509, 2019]: 
+RST value:  0
+0
+Building formula for cycle 2: 
+vars 2137 clauses 11742
+Checking cycle 2:
+Checking secret 0 [2609, 2844]: 
+Checking secret 1 [2639, 2874]: 
+Checking secret 2 [2669, 2904]: 
+Checking secret 3 [2694, 2929]: 
+Checking secret 4 [2724, 2959]: 
+Checking secret 5 [2754, 2989]: 
+Checking secret 6 [2784, 3019]: 
+Checking secret 7 [2814, 3049]: 
+RST value:  0
+0
+Building formula for cycle 3: 
+vars 4105 clauses 20529
+Checking cycle 3:
+Checking secret 0 [4754, 5293]: 
+Checking secret 1 [4822, 5361]: 
+Checking secret 2 [4890, 5429]: 
+Checking secret 3 [4953, 5492]: 
+Checking secret 4 [5021, 5560]: 
+Checking secret 5 [5089, 5628]: 
+Checking secret 6 [5157, 5696]: 
+Checking secret 7 [5225, 5764]: 
+RST value:  0
+0
+Building formula for cycle 4: 
+vars 7068 clauses 20866
+Checking cycle 4:
+Checking secret 0 [7883, 8510]: 
+Checking secret 1 [7962, 8589]: 
+Checking secret 2 [8041, 8668]: 
+Checking secret 3 [8115, 8742]: 
+Checking secret 4 [8194, 8821]: 
+Checking secret 5 [8273, 8900]: 
+Checking secret 6 [8352, 8979]: 
+Checking secret 7 [8431, 9058]: 
+RST value:  0
+0
+Building formula for cycle 5: 
+vars 12178 clauses 33232
+Checking cycle 5:
+Checking secret 0 [13256, 14356]: 
+Checking secret 1 [13394, 14494]: 
+Checking secret 2 [13532, 14632]: 
+Checking secret 3 [13666, 14766]: 
+Checking secret 4 [13804, 14904]: 
+Checking secret 5 [13942, 15042]: 
+Checking secret 6 [14080, 15180]: 
+Checking secret 7 [14218, 15318]: 
+RST value:  0
+0
+Building formula for cycle 6: 
+vars 23168 clauses 71210
+Checking cycle 6:
+Checking secret 0 [24980, 27855]: 
+Checking secret 1 [25340, 28215]: 
+Checking secret 2 [25700, 28575]: 
+Checking secret 3 [26055, 28930]: 
+Checking secret 4 [26415, 29290]: 
+Checking secret 5 [26775, 29650]: 
+Checking secret 6 [27135, 30010]: 
+Checking secret 7 [27495, 30370]: 
+RST value:  0
+0
+Building formula for cycle 7: 
+vars 41456 clauses 148085
+Checking cycle 7:
+Checking secret 0 [43737, 47108]: 
+Checking secret 1 [44159, 47530]: 
+Checking secret 2 [44581, 47952]: 
+Checking secret 3 [44998, 48369]: 
+Checking secret 4 [45420, 48791]: 
+Checking secret 5 [45842, 49213]: 
+Checking secret 6 [46264, 49635]: 
+Checking secret 7 [46686, 50057]: 
+Finished in 5.38
+The execution is secure
+
+	python3 /home/lucien/git/coco-alma/verify.py 
+	    --top-module aes_sbox 
+	    --json /home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/circuit.json 
+	    --vcd /home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd
+	    --label /home/lucien/git/coco-alma/examples/aes_sbox_dom/labels.txt 
+	    --rst-name rst_i
+	    --rst-phase 1
+	    --rst-cycles 0
+	    --cycles 8
+	    
+    --mode stable 
+    --probing-model time-constrained
+
+	

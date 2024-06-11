@@ -30,6 +30,14 @@ def ap_check_positive(num_str):
         raise argparse.ArgumentTypeError("'%s' is not a positive integer value" % num_str)
     return val
 
+def ap_check_natural(num_str):
+    try:
+        val = int(num_str)
+        if val < 0: raise ValueError
+    except ValueError:
+        raise argparse.ArgumentTypeError("'%s' is not a positive integer value" % num_str)
+    return val
+
 
 def name_cmp(a, b):
     na = len(a.split(".")) - 1

@@ -7,10 +7,11 @@
 #define dom_and_3rdorder 3
 #define isw_and_1storder 4
 #define ti_toffoli 5
+#define cms_and_3rdorder 1
 
 
 //This should be replaced by resp. define
-#define TC TC_NAME
+#define TC 1
 
 
 
@@ -92,6 +93,41 @@ int main(int argc, char **argv)
     tb->m_core->Z3_i = rand() & 0xFF;
     tb->m_core->Z4_i = rand() & 0xFF;
     tb->m_core->Z5_i = rand() & 0xFF;
+    #elif TC == cms_and_3rdorder
+    int X0, X1, X2, X3, Y0, Y1, Y2, Y3, Z0, Z1, Z2, Z3, Z4, Z5;
+    X0 = rand()  & 0xFF;
+    X2 = rand()  & 0xFF;
+    X3 = rand()  & 0xFF;
+    X1 = X^X0^X2^X3;
+    Y0 = rand()  & 0xFF;
+    Y2 = rand()  & 0xFF;
+    Y3 = rand()  & 0xFF;
+    Y1 = Y^Y0^Y2^Y3;
+
+    tb->m_core->X0_i = X0;
+    tb->m_core->X1_i = X1;
+    tb->m_core->X2_i = X2;
+    tb->m_core->X3_i = X3;
+    tb->m_core->Y0_i = Y0;
+    tb->m_core->Y1_i = Y1;
+    tb->m_core->Y2_i = Y2;
+    tb->m_core->Y3_i = Y3;
+    tb->m_core->Z0_i = rand() & 0xFF;
+    tb->m_core->Z1_i = rand() & 0xFF;
+    tb->m_core->Z2_i = rand() & 0xFF;
+    tb->m_core->Z3_i = rand() & 0xFF;
+    tb->m_core->Z4_i = rand() & 0xFF;
+    tb->m_core->Z5_i = rand() & 0xFF;
+    tb->m_core->Z6_i = rand() & 0xFF;
+    tb->m_core->Z7_i = rand() & 0xFF;
+    tb->m_core->Z8_i = rand() & 0xFF;
+    tb->m_core->Z9_i = rand() & 0xFF;
+    tb->m_core->Z10_i = rand() & 0xFF;
+    tb->m_core->Z11_i = rand() & 0xFF;
+    tb->m_core->Z12_i = rand() & 0xFF;
+    tb->m_core->Z13_i = rand() & 0xFF;
+    tb->m_core->Z14_i = rand() & 0xFF;
+    tb->m_core->Z15_i = rand() & 0xFF;
     #elif TC == isw_and_1storder
     int X0, X1, Y0, Y1, Z;
     X0 = rand()  & 0xFF;
@@ -144,6 +180,8 @@ int main(int argc, char **argv)
     #elif TC == dom_and_2ndorder
     q = tb->m_core->Q0_o ^ tb->m_core->Q1_o ^ tb->m_core->Q2_o;
     #elif TC == dom_and_3rdorder
+    q = tb->m_core->Q0_o ^ tb->m_core->Q1_o ^ tb->m_core->Q2_o ^ tb->m_core->Q3_o;
+    #elif TC == cms_and_3rdorder
     q = tb->m_core->Q0_o ^ tb->m_core->Q1_o ^ tb->m_core->Q2_o ^ tb->m_core->Q3_o;
     #elif TC == isw_and_1storder
     q = tb->m_core->Q0_o ^ tb->m_core->Q1_o;
