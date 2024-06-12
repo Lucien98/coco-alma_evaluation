@@ -68,5 +68,5 @@ LABEL_FORMAT_SLICE = "%s [%d:%d] = %s\n"
 # directory defines
 ALMA_DIR = os.path.dirname(os.path.realpath(__file__))
 TEMPLATE_DIR = ALMA_DIR + "/templates/"
-TMP_DIR = ALMA_DIR + "/tmp"
+TMP_DIR = "./tmp"
 ROOT_DIR = "/".join(ALMA_DIR.split("/")[:-1])

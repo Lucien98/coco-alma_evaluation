@@ -109,7 +109,7 @@ def get_verilator_include_path():
 
 
 def trace_verilator(args):
-    defines.TMP_DIR = args.tmp_dir
+    # defines.TMP_DIR = args.tmp_dir
     obj_dir_path = defines.TMP_DIR + "/obj_dir"
     # obj_dir_path = defines.TMP_DIR + "/obj_dir"
 

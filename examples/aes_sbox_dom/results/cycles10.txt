@@ -1,0 +1,18 @@
+| CircuitGraph | Total:  810 | Linear:  394 | Non-linear:  144 | Registers:  208 | Mux:    0 | 
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:22: [WARNING] Entry for name Binv1xDI already exists in namemap (Binv1xDI -> 6$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:23: [WARNING] Entry for name Binv2xDI already exists in namemap (Binv2xDI -> 7$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:24: [WARNING] Entry for name Binv3xDI already exists in namemap (Binv3xDI -> 8$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:25: [WARNING] Entry for name Bmul1xDI already exists in namemap (Bmul1xDI -> 9$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:26: [WARNING] Entry for name ClkxCI already exists in namemap (ClkxCI -> :$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:27: [WARNING] Entry for name QxDO already exists in namemap (QxDO -> ;$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:28: [WARNING] Entry for name XxDI already exists in namemap (XxDI -> <$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:29: [WARNING] Entry for name Zinv1xDI already exists in namemap (Zinv1xDI -> =$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:30: [WARNING] Entry for name Zinv2xDI already exists in namemap (Zinv2xDI -> >$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:31: [WARNING] Entry for name Zinv3xDI already exists in namemap (Zinv3xDI -> ?$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:32: [WARNING] Entry for name Zmul1xDI already exists in namemap (Zmul1xDI -> @$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:33: [WARNING] Entry for name Zmul2xDI already exists in namemap (Zmul2xDI -> A$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:34: [WARNING] Entry for name Zmul3xDI already exists in namemap (Zmul3xDI -> B$)
+/home/lucien/git/coco-alma/examples/aes_sbox_dom/tmp/tmp.vcd:540: [WARNING] Entry for name rst_i already exists in namemap (rst_i -> C$)
+RST value:  0
+0
+Building formula for cycle 0: 
