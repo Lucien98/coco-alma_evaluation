@@ -121,6 +121,7 @@ def trace():
 
 def verify(args):
     # top_module = "aes_sbox"
+    from sys import stderr
 
     verify_cmd = \
     """%s %s/verify.py \
@@ -135,12 +136,12 @@ def verify(args):
         --mode stable \
         --order %d\
         --cycles %d\
-        --probing-model classic > result/stable.txt\
+        --probing-model classic > result/stable.log 2>result/stable.txt\
     """ % (vpython3, ALMA_DIR, args.top_module, AES_DIR, AES_DIR, AES_DIR, args.order, args.cycles)
 
-    print(verify_cmd)
+    print(verify_cmd, file=stderr)
     verify_cmd = verify_cmd.replace("stable", "transient")
-    print(verify_cmd)
+    print(verify_cmd, file=stderr)
     return verify_cmd
 
 def main():

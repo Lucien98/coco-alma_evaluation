@@ -1070,13 +1070,15 @@ class SatChecker(object):
         return leaks
 
     def check(self):
+        from sys import stderr
         start_time = time.time()
         leaks = []
         if self.probing_model == CLASSIC:
             leaks = self.__check_secure_classic()
         else:
             leaks = self.__check_secure_time_constrained()
-        print("Finished in %.2f" % (time.time() - start_time))
+        # print("Finished in %.2f" % (time.time() - start_time))
+        print("%.6f, %d\n" % ((time.time() - start_time) , len(leaks) == 0 ), file=stderr)
         self.__debug_leaks(leaks)
         return len(leaks) == 0, leaks
 
