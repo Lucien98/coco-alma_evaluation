@@ -6,7 +6,7 @@ tmp/*
 result
 keccak_NF1
 cms_and
-aes_sbox_cms
+# aes_sbox_cms
 aes_dom_wrapper
 aes_NoFresh
 tmp

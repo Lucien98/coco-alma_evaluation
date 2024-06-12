@@ -4,7 +4,7 @@ import subprocess as sp
 AES_DIR = os.getcwd()#os.path.dirname(os.path.realpath(__file__))
 DESIGN_DIR = AES_DIR + "/design"
 ALMA_DIR = "/".join(AES_DIR.split("/")[:-2])
-TMP_DIR = ALMA_DIR + "/tmp"
+TMP_DIR = AES_DIR + "/tmp"
 TEMPLATE_DIR = ALMA_DIR + "/templates/"
 
 SYNTH_FILE_PATH = TMP_DIR + "/yosys_synth.ys"
@@ -31,7 +31,7 @@ def create_labels(top_module):
     
 def create_yosys_script(top_module):
     design_files = os.listdir(DESIGN_DIR)
-    design_files = [d for d in design_files if d.endswith(".vhdl")]
+    design_files = [d for d in design_files if (d.endswith(".vhdl") or d.endswith(".vhd"))]
 
     # print(design_files)
 

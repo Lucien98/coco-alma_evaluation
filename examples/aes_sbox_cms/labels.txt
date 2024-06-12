@@ -1,0 +1,17 @@
+# inputs:
+sboxIn [15:8] = secret 7:0
+sboxIn [7:0] = secret 7:0
+randomS2 [15:0] = volatile_random
+randomS3 [7:0] = volatile_random
+randomS4 [15:0] = volatile_random
+randomS5 [31:0] = volatile_random
+clk = unimportant
+rst_i = unimportant
+# registers:
+stage1out [15:0] = unimportant
+regout2 [15:0] = unimportant
+regout1 [15:0] = unimportant
+s5.regout [31:0] = unimportant
+s4.regout [31:0] = unimportant
+s3.regout [31:0] = unimportant
+s2.regout [31:0] = unimportant
