@@ -1,6 +1,5 @@
 import os, sys
 import subprocess as sp
-# import termcolor
 
 AES_DIR = os.path.dirname(os.path.realpath(__file__))
 DESIGN_DIR = AES_DIR + "/design"
