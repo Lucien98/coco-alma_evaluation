@@ -1,0 +1,12 @@
+XxDI [15:8] = secret 7:0
+XxDI [7:0] = secret 7:0
+Zmul1xDI [3:0] = volatile_random
+Zmul2xDI [3:0] = volatile_random
+Zmul3xDI [3:0] = volatile_random
+Zinv1xDI [1:0] = volatile_random
+Zinv2xDI [1:0] = volatile_random
+Zinv3xDI [1:0] = volatile_random
+Bmul1xDI [7:0] = volatile_random
+Binv1xDI [3:0] = volatile_random
+Binv2xDI [3:0] = volatile_random
+Binv3xDI [3:0] = volatile_random
