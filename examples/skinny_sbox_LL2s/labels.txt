@@ -1,0 +1,8 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [7:0] = unimportant
+in2 [7:0] = unimportant
+in3 [7:0] = unimportant
+r [143:0] = unimportant
+# registers:

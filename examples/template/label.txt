@@ -1,4 +1,4 @@
-XxDI [15:8] = secret 7:0
+XxDI [15:8] = secret 4:0
 XxDI [7:0] = secret 7:0
 Zmul1xDI [3:0] = volatile_random
 Zmul2xDI [3:0] = volatile_random

@@ -3,6 +3,7 @@ __pycache__
 .idea
 tmp/*
 !tmp/.keep
+results
 result
 keccak_NF1
 cms_and
@@ -12,3 +13,8 @@ aes_dom_wrapper
 tmp
 labels1.txt
 cms_and_8bit
+prince_sbox_CMS1
+label.txt
+# stable.log
+# transient.log
+.gitignore

@@ -1,0 +1,14 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [7:0] = secret 7:0
+in2 [7:0] = secret 7:0
+in3 [7:0] = secret 7:0
+r [215:0] = volatile_random
+# registers:
+Sbox0.CF_Reg[1] [26:0] = unimportant
+Sbox1.CF_Reg[1] [26:0] = unimportant
+Sbox1.CF_Reg[0] [26:0] = unimportant
+Sbox1.CF_Reg[2] [26:0] = unimportant
+Sbox0.CF_Reg[2] [26:0] = unimportant
+Sbox0.CF_Reg[0] [26:0] = unimportant

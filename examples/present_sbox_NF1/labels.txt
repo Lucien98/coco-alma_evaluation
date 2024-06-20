@@ -1,0 +1,15 @@
+# inputs:
+input1 [3:0] = secret 3:0
+input2 [3:0] = secret 3:0
+clk = unimportant
+rst_i = unimportant
+# registers:
+f_reg [7:0] = unimportant
+g_reg [7:0] = unimportant
+e_reg [3:0] = unimportant
+inst_l.xorinst7.in1 = unimportant
+inst_l.xorinst7.in3 = unimportant
+inst_l.xorinst8.in0 = unimportant
+inst_l.xorinst8.in3 = unimportant
+inst_l.xorinst7.in0 = unimportant
+inst_l.xorinst7.in2 = unimportant

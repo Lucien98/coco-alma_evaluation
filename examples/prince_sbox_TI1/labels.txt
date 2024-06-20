@@ -1,0 +1,13 @@
+# inputs:
+input_s1 [3:0] = secret 3:0
+input_s2 [3:0] = secret 3:0
+input_s3 [3:0] = secret 3:0
+clk = unimportant
+rst_i = unimportant
+# registers:
+m1affin_s1 [3:0] = unimportant
+q294n2in_s3 [3:0] = unimportant
+q294n3in_s1 [3:0] = unimportant
+q294n2in_s2 [3:0] = unimportant
+q294n3in_s2 [3:0] = unimportant
+q294n3in_s3 [3:0] = unimportant

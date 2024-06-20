@@ -1,0 +1,9 @@
+# inputs:
+ClkxCI = unimportant
+RstxRBI = unimportant
+IotaRCxDI = unimportant
+InputxDI [4:0] = secret 4:0
+InputxDI [9:5] = secret 4:0
+ZxDI [4:0] = volatile_random
+# registers:
+FFxDP [19:0] = unimportant

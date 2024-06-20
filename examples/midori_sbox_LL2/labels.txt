@@ -1,0 +1,13 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [3:0] = secret 3:0
+in2 [3:0] = secret 3:0
+in3 [3:0] = secret 3:0
+TwoSharesFromNeighbouringSbox [7:0] = volatile_random
+r [95:0] = volatile_random
+# registers:
+CF_Reg[2] [26:0] = unimportant
+CF_Reg[0] [26:0] = unimportant
+CF_Reg[3] [26:0] = unimportant
+CF_Reg1 [14:0] = unimportant

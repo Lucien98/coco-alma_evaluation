@@ -31,7 +31,7 @@ def create_labels(top_module):
     
 def create_yosys_script(top_module):
     design_files = os.listdir(DESIGN_DIR)
-    design_files = [d for d in design_files if (d.endswith(".vhdl") or d.endswith(".vhd"))]
+    design_files = [d for d in design_files if (d.endswith(".vhdl") or d.endswith(".vhd") or d.endswith(".v"))]
 
     # print(design_files)
 
@@ -39,7 +39,7 @@ def create_yosys_script(top_module):
     with open(TEMPLATE_FILE_PATH) as template_file:
         yosys_script += template_file.read()
     assert("{READ_FILES}" in yosys_script)
-    read_verilog_commands = "ghdl %s -e %s ;\n\n" % (" ".join(design_files),top_module)
+    read_verilog_commands = "ghdl --ieee=synopsys %s -e %s ;\n\n" % (" ".join(design_files),top_module)
     yosys_script = yosys_script.replace("{READ_FILES}", read_verilog_commands)
     assert("{TOP_MODULE}" in yosys_script)
     yosys_script = yosys_script.replace("{TOP_MODULE}", top_module)
@@ -129,15 +129,14 @@ def verify(args):
         --json %s/tmp/circuit.json \
         --vcd %s/tmp/tmp.vcd\
         --label %s/labels.txt \
-        --rst-name rst_i\
-        --rst-phase 1\
-        --rst-cycles 0\
-        --cycles 8\
+        --rst-name %s\
+        --rst-phase %d\
+        --rst-cycles %d\
         --mode stable \
         --order %d\
         --cycles %d\
         --probing-model classic > result/stable.log 2>result/stable.txt\
-    """ % (vpython3, ALMA_DIR, args.top_module, AES_DIR, AES_DIR, AES_DIR, args.order, args.cycles)
+    """ % (vpython3, ALMA_DIR, args.top_module, AES_DIR, AES_DIR, AES_DIR, args.rst_name, args.rst_phase, args.rst_cycles, args.order, args.cycles)
 
     print(verify_cmd, file=stderr)
     verify_cmd = verify_cmd.replace("stable", "transient")
@@ -155,6 +154,10 @@ def main():
                         help='The file path of c++ testbench file', type=str)
     parser.add_argument('--rst-name', metavar='rst_name', required=False, default = "rst_i",
                         help='The name of reset signal', type=str)
+    parser.add_argument('--rst-phase', metavar='rst_phase', required=False, default = 1,
+                        help='The value of reset signal during reset', type=int)
+    parser.add_argument('--rst-cycles', metavar='rst_cycles', required=False, default = 0,
+                        help='the clock cycles of reset signal', type=int)
     parser.add_argument('--order', metavar='order', required=False, default = 1,
                         help='Security order', type=int)
     parser.add_argument('--cycles', metavar='cycles', required=False, default = 1,

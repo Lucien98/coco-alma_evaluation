@@ -156,6 +156,10 @@ def create_label_template(circuit_json, label_file_path, top_module):
         bits = net_bits[reg_name]
         label_file.write(get_label_temp(reg_name, len(bits)))
     label_file.close()
+    import pathlib
+    path = pathlib.Path("labels.txt")
+    if not path.exists():   # True/False 
+        shutil.copyfile(label_file_path, "labels.txt")
 
 
 def get_yosys_bin_path():

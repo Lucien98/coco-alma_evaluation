@@ -1,0 +1,22 @@
+# inputs:
+x1 [7:0] = secret 7:0
+x2 [7:0] = secret 7:0
+clk = unimportant
+rst_i = unimportant
+# registers:
+io1r [7:0] = unimportant
+go1r [7:0] = unimportant
+io2r [7:0] = unimportant
+go2r [7:0] = unimportant
+fo2r [7:0] = unimportant
+ho2r [7:0] = unimportant
+fo1r [7:0] = unimportant
+ho1r [7:0] = unimportant
+hpo1r [1:0] = unimportant
+gpo1r [1:0] = unimportant
+gpo2r [1:0] = unimportant
+hpo2r [1:0] = unimportant
+fpo2r [1:0] = unimportant
+ipo2r [1:0] = unimportant
+fpo1r [1:0] = unimportant
+ipo1r [1:0] = unimportant

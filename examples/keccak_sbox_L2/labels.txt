@@ -1,0 +1,20 @@
+# inputs:
+aa [0] = secret 0
+bb [0] = secret 1
+cc [0] = secret 2
+dd [0] = secret 3
+ee [0] = secret 4
+aa [1] = secret 0
+bb [1] = secret 1
+cc [1] = secret 2
+dd [1] = secret 3
+ee [1] = secret 4
+aa [2] = secret 0
+bb [2] = secret 1
+cc [2] = secret 2
+dd [2] = secret 3
+ee [2] = secret 4
+rst_i = unimportant
+clk = unimportant
+r [14:0] = volatile_random
+# registers:

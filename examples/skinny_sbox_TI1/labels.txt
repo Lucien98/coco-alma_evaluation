@@ -1,0 +1,16 @@
+# inputs:
+input_s1 [7:0] = secret 7:0
+input_s2 [7:0] = secret 7:0
+input_s3 [7:0] = secret 7:0
+clk = unimportant
+rst_i = unimportant
+# registers:
+stage2_in2 [7:0] = unimportant
+stage3_in2 [7:0] = unimportant
+stage4_in3 [7:0] = unimportant
+stage3_in3 [7:0] = unimportant
+stage4_in2 [7:0] = unimportant
+stage3_in1 [7:0] = unimportant
+stage2_in1 [7:0] = unimportant
+stage2_in3 [7:0] = unimportant
+stage4_in1 [7:0] = unimportant

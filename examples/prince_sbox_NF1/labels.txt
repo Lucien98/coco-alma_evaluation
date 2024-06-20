@@ -1,0 +1,11 @@
+# inputs:
+input1 [3:0] = secret 3:0
+input2 [3:0] = secret 3:0
+sel = unimportant
+clk = unimportant
+rst_i = unimportant
+# registers:
+g_reg [7:0] = unimportant
+e_reg [7:0] = unimportant
+f_reg [7:0] = unimportant
+h_reg [7:0] = unimportant
