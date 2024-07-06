@@ -1,0 +1,4 @@
+python3 /home/lucien/git/coco-alma/parse.py --log-yosys         --top-module top_module_d11         --source         /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/design/Present_Sbox.v    /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/design/CF.v    /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/design/Q12_2order.v    /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/design/XOR_3.v    /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/design/PresentAffines.v        --top-module Present_Sbox         --json tmp/circuit.json         --label tmp/labels.txt 
+    
+python3 /home/lucien/git/coco-alma/trace.py         --testbench /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/verilator_tb.cpp         --netlist /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/tmp/circuit.v        -d /home/lucien/git/coco-alma/examples/present_sbox_L2_5stage/tmp/
+    

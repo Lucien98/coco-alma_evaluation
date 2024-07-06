@@ -1,0 +1,8 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [4:0] = secret 4:0
+in2 [4:0] = secret 4:0
+in3 [4:0] = secret 4:0
+# registers:
+CF_Reg [44:0] = unimportant

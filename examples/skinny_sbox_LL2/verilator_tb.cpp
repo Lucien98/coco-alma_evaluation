@@ -3,11 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sbox[16] = {0xB,0xF,0x3,0x2,0xA,0xC,0x9,0x1,0x6,0x7,0x8,0x0,0xE,0x5,0xD,0x4
-};
-int sbox_inverse_affine[16] = {0xB ,0x7 ,0x3 ,0x2 ,0xF ,0xD ,0x8 ,0x9 ,0xA ,0x6 ,0x4 ,0x0 ,0x5 ,0xE ,0xC ,0x1
-};
-int sbox_affine[16] = {0xB ,0xF ,0x3 ,0x2 ,0xA ,0xC ,0x9 ,0x1 ,0x6 ,0x7 ,0x8 ,0x0 ,0xE ,0x5 ,0xD ,0x4 
+int sbox[16] = {0xC, 0x6, 0x9, 0x0, 0x1, 0xA, 0x2, 0xB, 0x3, 0x8, 0x5, 0xD, 0x4, 0xE, 0x7, 0xF
 };
 
 int main(int argc, char **argv) 
@@ -20,42 +16,52 @@ int main(int argc, char **argv)
     
     
     tb->tick();
+    tb->tick();
 
     int X, Y;
-    X = rand() & 0xF;
-    Y = sbox_affine[X];
 
-    int X0, X1;
-    X0 = rand()  & 0xF;
-    X1 = X^X0;
+    for (int i = 0; i < 16; ++i)
+    {
+        // X = rand() & 0xF;
+        X=i;
+        Y = sbox[X];
 
-    tb->m_core->input1 = X0;
-    tb->m_core->input2 = X1;
+        int X0, X1, X2;
+        X0 = rand()  & 0xF;
+        X1 = rand()  & 0xF;
+        X2 = X^X0^X1;
 
-    tb->tick();
-    tb->tick();
+        tb->m_core->in1 = X0;
+        tb->m_core->in2 = X1;
+        tb->m_core->in3 = X2;
 
-    int Q0, Q1;
+        tb->tick();
+        tb->tick();
 
-    Q0 = tb->m_core->output1 & 0xF;
-    Q1 = tb->m_core->output2 & 0xF;
+        int Q0, Q1, Q2;
 
-    int Q = Q0 ^ Q1;
-    printf("X: %d\n", X);
-    printf("Q: %d\n", Q);
-    printf("X0: %d\n", X0);
-    printf("X1: %d\n", X1);
-    printf("Q0: %d\n", Q0);
-    printf("Q1: %d\n", Q1);
+        Q0 = tb->m_core->out1 & 0xF;
+        Q1 = tb->m_core->out2 & 0xF;
+        Q2 = tb->m_core->out3 & 0xF;
 
-    if (Y != Q)
-        printf("Error. \n\n");
-    else
-        printf("OK. \n\n");
+        int Q = Q0 ^ Q1 ^Q2;
+        printf("X: %2d, ", X);
+        printf("Y: %2d, ", Y);
+        printf("Q: %2d: ", Q);
+        // printf("X0: %d\n", X0);
+        // printf("X1: %d\n", X1);
+        // printf("Q0: %d\n", Q0);
+        // printf("Q1: %d\n", Q1);
 
-    assert(Y == Q);
+        if (Y != Q)
+            printf("Error. \n");
+        else
+            printf("OK. \n");
 
-    tb->tick();
+        // assert(Y == Q);
+        tb->tick();
+
+    }
     
     tb->closetrace();
 }

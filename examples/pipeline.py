@@ -90,7 +90,6 @@ def parse(top_module):
 
     parse_cmd = \
     """python3 %s/parse.py --log-yosys \
-        --top-module top_module_d11 \
         --source \
         %s\
         --top-module %s \

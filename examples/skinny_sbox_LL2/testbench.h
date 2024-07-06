@@ -52,17 +52,17 @@ template<class Module> struct Testbench
     virtual void tick(void) 
     {   
         // Falling edge
-        m_core->clk = 0;
+        m_core->clk = 1;
         m_core->eval();
         if(m_trace) m_trace->dump(20*m_tickcount);
         
         // Rising edge
-        m_core->clk = 1;
+        m_core->clk = 0;
         m_core->eval();
         if(m_trace) m_trace->dump(20*m_tickcount + 10);
         
         // Falling edge settle eval
-        m_core->clk = 0;
+        m_core->clk = 1;
         m_core->eval();
         
         if(m_trace) m_trace->flush();

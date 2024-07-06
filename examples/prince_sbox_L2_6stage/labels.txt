@@ -1,0 +1,26 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [3:0] = secret 3:0
+in2 [3:0] = secret 3:0
+in3 [3:0] = secret 3:0
+r [37:0] = volatile_random
+# registers:
+M1_out1_reg [3:0] = unimportant
+M2_out2_reg [3:0] = unimportant
+InAff_out2_reg [3:0] = unimportant
+M1_out2_reg [3:0] = unimportant
+M1_out3_reg [3:0] = unimportant
+M2_out3_reg [3:0] = unimportant
+InAff_out1_reg [3:0] = unimportant
+M2_out1_reg [3:0] = unimportant
+InAff_out3_reg [3:0] = unimportant
+Q294_inst2.CF_Reg [17:0] = unimportant
+Q294_inst1.CF_Reg [17:0] = unimportant
+Q294_inst3.CF_Reg [17:0] = unimportant
+Q294_inst2.creg [2:0] = unimportant
+Q294_inst1.creg [2:0] = unimportant
+Q294_inst3.creg [2:0] = unimportant
+Q294_inst3.dreg [2:0] = unimportant
+Q294_inst1.dreg [2:0] = unimportant
+Q294_inst2.dreg [2:0] = unimportant

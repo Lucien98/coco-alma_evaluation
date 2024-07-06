@@ -24,5 +24,18 @@
 
 # cp -r template/ skinny_sbox_CMS1
 # cp -r template/ skinny_sbox_TI1
-cp -r template/ skinny_sbox_LL2
+# cp -r template/ skinny_sbox_LL2
 # cp -r template/ skinny_sbox_LL2s
+
+# cp -r present_sbox_L2_3stage present_sbox_L2_5stage
+# cp -r present_sbox_L2s_3stage present_sbox_L2s_5stage
+# cp -r present_sbox_L2_3stage present_sbox_L2_5stage
+# cp -r present_sbox_L2_3stage present_sbox_L2_5stage
+# cp -r present_sbox_L2_3stage midori_sbox_L2_3stage
+# cp -r present_sbox_L2s_3stage midori_sbox_L2s_3stage
+
+# cp -r present_sbox_L2_3stage prince_sbox_L2_4stage
+# cp -r present_sbox_L2s_3stage prince_sbox_L2s_4stage
+
+cp -r present_sbox_L2_3stage skinny_sbox_L2_3stage
+cp -r present_sbox_L2s_3stage skinny_sbox_L2s_3stage

@@ -33,8 +33,8 @@ int main(int argc, char **argv)
     }
 
     tb->m_core->InputxDI = XShare[0]\
-        ^ XShare[1]\
-        ^ XShare[2]\
+        ^ (XShare[1] << 5)\
+        ^ (XShare[2] << 10)\
     ;
 
     tb->tick();

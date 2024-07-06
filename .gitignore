@@ -4,7 +4,7 @@ __pycache__
 tmp/*
 !tmp/.keep
 results
-result
+# result
 keccak_NF1
 cms_and
 # aes_sbox_cms
@@ -15,6 +15,14 @@ labels1.txt
 cms_and_8bit
 prince_sbox_CMS1
 label.txt
-# stable.log
-# transient.log
+stable.log
+transient.log
 .gitignore
+*model*.txt
+*cycles10.txt
+*.png
+10.txt
+11.txt
+stable.txt
+transient.txt
+*.bak

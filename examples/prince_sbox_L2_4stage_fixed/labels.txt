@@ -1,0 +1,22 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [3:0] = unimportant
+in2 [3:0] = unimportant
+in3 [3:0] = unimportant
+r [42:0] = unimportant
+klmn_in1 [3:0] = unimportant
+klmn_in2 [5:0] = unimportant
+# registers:
+in2_reg [3:0] = unimportant
+in1_reg [3:0] = unimportant
+in3_reg [3:0] = unimportant
+Q294_inst3.CF_Reg [26:0] = unimportant
+Q294_inst1.CF_Reg [17:0] = unimportant
+Q294_inst2.CF_Reg [17:0] = unimportant
+Q294_inst3.a [2:0] = unimportant
+Q294_inst2.a [2:0] = unimportant
+Q294_inst2.b [2:0] = unimportant
+Q294_inst2.dXORc_reg [2:0] = unimportant
+Q294_inst3.creg [2:0] = unimportant
+Q294_inst2.tmp_c = unimportant

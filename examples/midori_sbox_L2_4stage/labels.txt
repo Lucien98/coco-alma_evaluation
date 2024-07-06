@@ -1,0 +1,20 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [3:0] = secret 3:0
+in2 [3:0] = secret 3:0
+in3 [3:0] = secret 3:0
+r [23:0] = volatile_random
+# registers:
+M2_out3_reg [3:0] = unimportant
+M2_out2_reg [3:0] = unimportant
+M2_out1_reg [3:0] = unimportant
+InAff_out3_reg [3:0] = unimportant
+InAff_out2_reg [3:0] = unimportant
+InAff_out1_reg [3:0] = unimportant
+Q12_inst1.CF_Reg [17:0] = unimportant
+Q12_inst2.CF_Reg [17:0] = unimportant
+Q12_inst2.areg [2:0] = unimportant
+Q12_inst1.dreg [2:0] = unimportant
+Q12_inst1.areg [2:0] = unimportant
+Q12_inst2.dreg [2:0] = unimportant
