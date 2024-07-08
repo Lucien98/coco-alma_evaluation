@@ -1,6 +1,6 @@
 lang=verilog
 top_module=inversion_TI
-cycles=2
+cycles=3
 order=1
 rst_name=rst_i
 testbench=verilator_tb.cpp
