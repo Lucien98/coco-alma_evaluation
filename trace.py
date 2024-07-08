@@ -99,9 +99,13 @@ def check_run(command, message, cwd=False):
 
 def get_verilator_include_path():
     info = subprocess.check_output([VERILATOR, "-V"], encoding="ascii")
+    envir = False
     for info_line in info.split("\n"):
         info_line = info_line.split()
         if len(info_line) == 0: continue
+        if info_line[0] == ROOT_INFO_STR and not envir: 
+            envir = True
+            continue
         if info_line[0] != ROOT_INFO_STR: continue
         return info_line[2] + "/include"
     print("ERROR: Could not find Verilator root directory.")

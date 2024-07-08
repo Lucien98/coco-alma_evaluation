@@ -1,7 +1,7 @@
 lang=vhdl
 top_module=aes_sbox
 order=1
-cycles=7
+cycles=8
 rst_name=rst_i
 testbench=verilator_tb.cpp
 

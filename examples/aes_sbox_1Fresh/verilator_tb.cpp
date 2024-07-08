@@ -86,6 +86,7 @@ int main(int argc, char **argv)
         printf("OK. \n\n");
 
     assert(q==Q && p==P);
+    tb->tick();
 
     tb->closetrace();
 }

@@ -71,6 +71,7 @@ int main(int argc, char **argv)
         printf("OK. \n\n");
 
     assert(Y == Q);
+    tb->tick();
     
     tb->closetrace();
 }

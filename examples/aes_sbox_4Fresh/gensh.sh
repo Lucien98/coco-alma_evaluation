@@ -1,6 +1,6 @@
 lang=verilog
 top_module=GF256Inv_Unit
-cycles=5
+cycles=6
 order=1
 rst_name=rst_i
 testbench=verilator_tb.cpp

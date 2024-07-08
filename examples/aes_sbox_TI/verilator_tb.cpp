@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 
     assert(Y == eY);
 
-    // tb->tick();
+    tb->tick();
     
     tb->closetrace();
 }
