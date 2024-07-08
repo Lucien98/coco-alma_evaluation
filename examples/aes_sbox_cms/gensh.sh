@@ -1,6 +1,6 @@
 lang=vhdl # verilog
 top_module=sbox
-cycles=8
+cycles=7
 order=1
 rst_name=rst_i
 testbench=verilator_tb.cpp

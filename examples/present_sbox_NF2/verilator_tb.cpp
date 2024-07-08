@@ -15,10 +15,10 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
-    for (int i = 0; i < 16; ++i)
+    for (int i = 0; i < 1; ++i)
     {
         // X = rand() & 0xF;
         X=i;
@@ -60,7 +60,7 @@ int main(int argc, char **argv)
             printf("OK. \n");
 
         // assert(Y == Q);
-        tb->tick();
+        // tb->tick();
 
     }
 

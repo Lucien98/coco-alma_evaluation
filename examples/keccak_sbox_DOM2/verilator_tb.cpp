@@ -17,8 +17,8 @@ int main(int argc, char **argv)
     tb->reset();
     
     
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = (rand() + 2) & 0x1F;
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 
     tb->tick();
     tb->tick();
-    tb->tick();
+    // tb->tick();
 
     int QShare[N];
 
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
 
     // assert(Y == Q);
 
-    tb->tick();
+    // tb->tick();
     
     tb->closetrace();
 }

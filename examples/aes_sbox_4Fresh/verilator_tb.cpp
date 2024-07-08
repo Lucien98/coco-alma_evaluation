@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = rand() & 0xFF;
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
     tb->tick();
     tb->tick();
     tb->tick();
-    tb->tick();
+    // tb->tick();
 
     int Q0, Q1;
 
@@ -71,8 +71,6 @@ int main(int argc, char **argv)
         printf("OK. \n\n");
 
     assert(Y == Q);
-
-    tb->tick();
     
     tb->closetrace();
 }

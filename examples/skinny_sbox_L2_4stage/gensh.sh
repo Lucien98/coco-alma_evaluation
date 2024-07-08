@@ -1,6 +1,6 @@
 lang=verilog
 top_module=SKINNY_Sbox
-cycles=4
+cycles=5
 order=2
 rst_name=rst_i
 testbench=verilator_tb.cpp

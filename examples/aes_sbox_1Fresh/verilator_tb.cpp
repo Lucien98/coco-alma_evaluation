@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y, P, Q;
     X = rand() & 0xF;
@@ -57,9 +57,7 @@ int main(int argc, char **argv)
     tb->tick();
     tb->tick();
     tb->tick();
-    tb->tick();
-    tb->tick();
-    tb->tick();
+    // tb->tick();
 
     int p, q;
 
@@ -89,12 +87,5 @@ int main(int argc, char **argv)
 
     assert(q==Q && p==P);
 
-    tb->tick();
-    tb->tick();
-    tb->tick();
-    tb->tick();
-    tb->tick();
-    tb->tick();
-    
     tb->closetrace();
 }

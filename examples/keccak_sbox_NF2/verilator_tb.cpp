@@ -17,8 +17,8 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = (rand() + 2) & 0x1F;
@@ -37,8 +37,8 @@ int main(int argc, char **argv)
     tb->m_core->in3 = XShare[2] & 0x1F;
 
     tb->tick();
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int QShare[N];
 

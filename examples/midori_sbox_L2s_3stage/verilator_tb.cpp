@@ -15,11 +15,11 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y, P, Q;
-    X = (rand()+6) & 0xF;
-    Y = (rand()+6) & 0xF;
+    X = (rand()+3) & 0xF;
+    Y = (rand()+8) & 0xF;
 
     P = sbox[X] & 0xF;
     Q = sbox[Y] & 0xF;

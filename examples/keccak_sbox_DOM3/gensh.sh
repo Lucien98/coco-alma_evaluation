@@ -1,6 +1,6 @@
 lang=verilog
 top_module=keccak_sbox
-cycles=3
+cycles=2
 order=3
 rst_name=RstxRBI
 rst_phase=0

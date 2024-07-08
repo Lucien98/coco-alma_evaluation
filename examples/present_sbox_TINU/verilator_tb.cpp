@@ -15,28 +15,33 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = rand() & 0xF;
+    X=X+1;
     Y = sbox[X];
 
-    int X0, X1;
+    int X0, X1, X2;
     X0 = rand()  & 0xF;
-    X1 = X^X0;
+    X1 = rand()  & 0xF;
+    X2 = X^X0^X1;
 
-    tb->m_core->input1 = X0;
-    tb->m_core->input2 = X1;
+    tb->m_core->sboxIn1 = X0;
+    tb->m_core->sboxIn2 = X1;
+    tb->m_core->sboxIn3 = X2;
 
     tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
-    int Q0, Q1;
+    int Q0, Q1, Q2;
 
-    Q0 = tb->m_core->output1 & 0xF;
-    Q1 = tb->m_core->output2 & 0xF;
+    Q0 = tb->m_core->share1 & 0xF;
+    Q1 = tb->m_core->share2 & 0xF;
+    Q2 = tb->m_core->share3 & 0xF;
 
-    int Q = Q0 ^ Q1;
+    int Q = Q0 ^ Q1 ^Q2;
     printf("X: %d\n", X);
     printf("Q: %d\n", Q);
     printf("X0: %d\n", X0);
@@ -54,4 +59,5 @@ int main(int argc, char **argv)
     tb->tick();
     
     tb->closetrace();
+
 }

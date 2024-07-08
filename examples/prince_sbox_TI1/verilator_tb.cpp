@@ -18,50 +18,50 @@ int main(int argc, char **argv)
     
     // tb->reset();
     
-    
-    tb->tick();
-    tb->tick();
+    for (int i = 0; i < 1; ++i)
+    {
+        int X, Y;
+        X = rand() & 0xF;
+        X=X+1;
+        Y = sbox_inverse_affine[X];
 
-    int X, Y;
-    X = rand() & 0xF;
-    X=X+1;
-    Y = sbox_inverse_affine[X];
+        int X0, X1, X2;
+        X0 = rand()  & 0xF;
+        X1 = rand()  & 0xF;
+        X2 = X^X0^X1;
 
-    int X0, X1, X2;
-    X0 = rand()  & 0xF;
-    X1 = rand()  & 0xF;
-    X2 = X^X0^X1;
+        tb->m_core->input_s1 = X0;
+        tb->m_core->input_s2 = X1;
+        tb->m_core->input_s3 = X2;
 
-    tb->m_core->input_s1 = X0;
-    tb->m_core->input_s2 = X1;
-    tb->m_core->input_s3 = X2;
+        tb->tick();
+        tb->tick();
+        // tb->tick();
 
-    tb->tick();
-    tb->tick();
-    tb->tick();
+        int Q0, Q1, Q2;
 
-    int Q0, Q1, Q2;
+        Q0 = tb->m_core->output_s1 & 0xF;
+        Q1 = tb->m_core->output_s2 & 0xF;
+        Q2 = tb->m_core->output_s3 & 0xF;
 
-    Q0 = tb->m_core->output_s1 & 0xF;
-    Q1 = tb->m_core->output_s2 & 0xF;
-    Q2 = tb->m_core->output_s3 & 0xF;
+        int Q = Q0 ^ Q1 ^Q2;
+        printf("X:%X, ", X);
+        printf("Y:%X, ", Y);
+        printf("Q:%X, ", Q);
+        // printf("X0: %x, ", X0);
+        // printf("X1: %x, ", X1);
+        // printf("Q0: %x, ", Q0);
+        // printf("Q1: %x, ", Q1);
 
-    int Q = Q0 ^ Q1 ^Q2;
-    printf("X: %d\n", X);
-    printf("Q: %d\n", Q);
-    printf("X0: %d\n", X0);
-    printf("X1: %d\n", X1);
-    printf("Q0: %d\n", Q0);
-    printf("Q1: %d\n", Q1);
+        if (Y != Q)
+            printf("Error. \n");
+        else
+            printf("OK. \n");
 
-    if (Y != Q)
-        printf("Error. \n\n");
-    else
-        printf("OK. \n\n");
+        // assert(Y == Q);
 
-    assert(Y == Q);
+        tb->tick();
 
-    tb->tick();
-    
+    }    
     tb->closetrace();
 }

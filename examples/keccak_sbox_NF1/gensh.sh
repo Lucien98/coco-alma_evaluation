@@ -1,6 +1,6 @@
 lang=verilog
 top_module=Chi_NoFresh
-cycles=3
+cycles=2
 order=1
 rst_name=rst_i
 testbench=verilator_tb.cpp

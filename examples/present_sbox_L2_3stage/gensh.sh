@@ -1,6 +1,6 @@
 lang=verilog
 top_module=Present_Sbox
-cycles=5
+cycles=4
 order=2
 rst_name=rst_i
 testbench=verilator_tb.cpp

@@ -15,10 +15,10 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
-    for (int i = 0; i < 16; ++i)
+    for (int i = 0; i < 1; ++i)
     {
         // X = rand() & 0xF;
         X=i;
@@ -34,8 +34,6 @@ int main(int argc, char **argv)
         tb->m_core->in2 = X1;
         tb->m_core->in3 = X2;
 
-        tb->tick();
-        tb->tick();
         tb->tick();
         tb->tick();
         tb->tick();

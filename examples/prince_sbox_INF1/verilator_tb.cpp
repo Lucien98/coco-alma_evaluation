@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = rand() & 0xF;
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     tb->m_core->input2 = X1;
 
     tb->tick();
-    tb->tick();
+    // tb->tick();
 
     int Q0, Q1;
 

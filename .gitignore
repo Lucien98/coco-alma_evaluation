@@ -26,3 +26,5 @@ transient.log
 stable.txt
 transient.txt
 *.bak
+examples/dirs.txt
+examples/dom_and_1bit/

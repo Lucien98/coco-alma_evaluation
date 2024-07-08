@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y, P, Q;
     X = rand() & 0xF;
@@ -37,8 +37,8 @@ int main(int argc, char **argv)
     tb->m_core->in3 = X2 ^ (Y2 << 4);
 
     tb->tick();
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int qp, p, q;
 

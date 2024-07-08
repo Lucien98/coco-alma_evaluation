@@ -1,6 +1,6 @@
 lang=verilog
 top_module=keccak_sbox
-cycles=3
+cycles=1
 order=1
 rst_name=rst_i
 testbench=verilator_tb.cpp

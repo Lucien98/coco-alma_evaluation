@@ -1,6 +1,6 @@
 lang=verilog
 top_module=PRINCE_Sbox_inv
-cycles=3
+cycles=2
 order=2
 rst_name=rst_i
 testbench=verilator_tb.cpp

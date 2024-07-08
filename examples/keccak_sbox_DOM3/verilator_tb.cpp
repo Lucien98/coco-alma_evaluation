@@ -17,8 +17,8 @@ int main(int argc, char **argv)
     tb->reset();
     
     
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = (rand() + 1) & 0x1F;
@@ -33,14 +33,14 @@ int main(int argc, char **argv)
     }
 
     tb->m_core->InputxDI = XShare[0]\
-        ^ XShare[1]\
-        ^ XShare[2]\
-        ^ XShare[3]\
+        ^ (XShare[1] << 5)\
+        ^ (XShare[2] << 10)\
+        ^ (XShare[3] << 15)\
     ;
 
     tb->tick();
     tb->tick();
-    tb->tick();
+    // tb->tick();
 
     int QShare[N];
 
@@ -78,7 +78,7 @@ int main(int argc, char **argv)
 
     // assert(Y == Q);
 
-    tb->tick();
+    // tb->tick();
     
     tb->closetrace();
 }

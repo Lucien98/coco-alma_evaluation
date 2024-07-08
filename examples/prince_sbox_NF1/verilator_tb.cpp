@@ -19,43 +19,46 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
-    X = rand() & 0xF;
-    Y = sbox_affine[X];
+    for (int i = 0; i < 1; ++i)
+    {
+        X = 15-i;//rand() & 0xF;
+        Y = sbox_affine[X];
 
-    int X0, X1;
-    X0 = rand()  & 0xF;
-    X1 = X^X0;
+        int X0, X1;
+        X0 = rand()  & 0xF;
+        X1 = X^X0;
 
-    tb->m_core->input1 = X0;
-    tb->m_core->input2 = X1;
+        tb->m_core->input1 = X0;
+        tb->m_core->input2 = X1;
 
-    tb->tick();
-    tb->tick();
+        tb->tick();
+        // tb->tick();
 
-    int Q0, Q1;
+        int Q0, Q1;
 
-    Q0 = tb->m_core->output1 & 0xF;
-    Q1 = tb->m_core->output2 & 0xF;
+        Q0 = tb->m_core->output1 & 0xF;
+        Q1 = tb->m_core->output2 & 0xF;
 
-    int Q = Q0 ^ Q1;
-    printf("X: %d\n", X);
-    printf("Q: %d\n", Q);
-    printf("X0: %d\n", X0);
-    printf("X1: %d\n", X1);
-    printf("Q0: %d\n", Q0);
-    printf("Q1: %d\n", Q1);
+        int Q = Q0 ^ Q1;
+        printf("X: %d\n", X);
+        printf("Q: %d\n", Q);
+        printf("X0: %d\n", X0);
+        printf("X1: %d\n", X1);
+        printf("Q0: %d\n", Q0);
+        printf("Q1: %d\n", Q1);
 
-    if (Y != Q)
-        printf("Error. \n\n");
-    else
-        printf("OK. \n\n");
+        if (Y != Q)
+            printf("Error. \n\n");
+        else
+            printf("OK. \n\n");
 
-    assert(Y == Q);
+        assert(Y == Q);
 
-    tb->tick();
-    
+        tb->tick();
+
+    }
     tb->closetrace();
 }

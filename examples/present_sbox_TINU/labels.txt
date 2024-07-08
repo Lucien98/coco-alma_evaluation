@@ -1,0 +1,9 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+sboxIn1 [3:0] = secret 3:0
+sboxIn2 [3:0] = secret 3:0
+sboxIn3 [3:0] = secret 3:0
+# registers:
+f2in [7:0] = unimportant
+y2:24 [3:0] = unimportant

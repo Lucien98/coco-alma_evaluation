@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int mask = 1;
     for (int i = 0; i < N-1; ++i)
@@ -74,8 +74,8 @@ int main(int argc, char **argv)
     tb->m_core->ee = ee;
 
     tb->tick();
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int ap, bp, cp, dp, ep;
 
@@ -120,7 +120,7 @@ int main(int argc, char **argv)
 
     // assert(Y == Q);
 
-    tb->tick();
+    // tb->tick();
     
     tb->closetrace();
 }

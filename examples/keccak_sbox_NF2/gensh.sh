@@ -1,6 +1,6 @@
 lang=verilog
 top_module=Chi_NoFresh
-cycles=3
+cycles=2
 order=2
 rst_name=rst_i
 rst_phase=1

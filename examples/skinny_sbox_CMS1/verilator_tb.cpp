@@ -32,13 +32,13 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
     // for (int i = 0; i < 256; ++i)
     for (int i = 0; i < 1; ++i) // maybe it is not a pipeline version
     {
-        X = i;//rand() & 0xFF;
+        X = 255-i;//rand() & 0xFF;
         Y = sbox[X];
 
         int X0, X1;
@@ -51,6 +51,8 @@ int main(int argc, char **argv)
         tb->tick();
         tb->tick();
         tb->tick();
+        tb->tick();
+        // tb->tick();
 
         int Q0, Q1;
 
@@ -71,7 +73,7 @@ int main(int argc, char **argv)
 
         // assert(Y == Q);
 
-        // tb->tick();
+        tb->tick();
         // tb->tick();
         // tb->tick();
     }

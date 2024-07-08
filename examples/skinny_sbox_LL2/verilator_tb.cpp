@@ -14,10 +14,6 @@ int main(int argc, char **argv)
     
     // tb->reset();
     
-    
-    tb->tick();
-    tb->tick();
-
     int X, Y;
 
     for (int i = 0; i < 16; ++i)
@@ -35,6 +31,9 @@ int main(int argc, char **argv)
         tb->m_core->in2 = X1;
         tb->m_core->in3 = X2;
 
+        tb->tick();
+        tb->tick();
+        tb->tick();
         tb->tick();
         tb->tick();
 
@@ -59,7 +58,7 @@ int main(int argc, char **argv)
             printf("OK. \n");
 
         // assert(Y == Q);
-        tb->tick();
+        // tb->tick();
 
     }
     

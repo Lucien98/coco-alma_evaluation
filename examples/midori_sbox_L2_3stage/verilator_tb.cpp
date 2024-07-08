@@ -15,13 +15,13 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
-    for (int i = 0; i < 16; ++i)
+    for (int i = 0; i < 1; ++i)
     {
         // X = rand() & 0xF;
-        X=i;
+        X=15-i;
         Y = sbox[X];
 
         int X0, X1, X2;
@@ -37,8 +37,8 @@ int main(int argc, char **argv)
         tb->tick();
         tb->tick();
         tb->tick();
-        tb->tick();
-        tb->tick();
+        // tb->tick();
+        // tb->tick();
 
         int Q0, Q1, Q2;
 

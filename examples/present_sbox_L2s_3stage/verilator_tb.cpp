@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y, P, Q;
     X = rand() & 0xF;

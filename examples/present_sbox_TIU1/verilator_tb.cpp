@@ -15,8 +15,8 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int X, Y;
     X = rand() & 0xF;
@@ -33,8 +33,8 @@ int main(int argc, char **argv)
     tb->m_core->sboxIn3 = X2;
 
     tb->tick();
-    tb->tick();
-    tb->tick();
+    // tb->tick();
+    // tb->tick();
 
     int Q0, Q1, Q2;
 
