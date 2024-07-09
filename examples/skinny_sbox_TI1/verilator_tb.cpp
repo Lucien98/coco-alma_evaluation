@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     // tb->reset();
     
     
-    tb->tick();
+    // tb->tick();
 
     int X, Y;
     // for (int i = 0; i < 256; ++i)// it works.
