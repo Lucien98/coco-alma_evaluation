@@ -1,0 +1,6 @@
+# inputs:
+clk = unimportant
+rst_i = unimportant
+in1 [3:0] = secret 3:0
+in2 [3:0] = secret 3:0
+# registers:

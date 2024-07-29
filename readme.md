@@ -1,3 +1,19 @@
+# Evaluations for CocoAlma
+This repository includes the source code for CocoAlma, as well as benchmarks from open-source masked implementations and verification results.
+
+We have updated the CocoAlma source code to handle implementations where the `rst-cycles` parameter is supposed to be `0`, whereas it previously required `rst-cycles` to be a positive integer.
+
+Benchmarks and verification results can be found in the `examples` folder. These results are referenced in the following paper.
+
+## Publication
+F. Zhou, H. Chen, L. Fan (2024): [Prover - Toward More Efficient Formal Verification of Masking in Probing Model](https://eprint.iacr.org/2024/1202.pdf)
+
+
+Here down below is the original README of CocoAlma
+
+---
+
+
 # CocoAlma: Execution-aware Masking Verification
 
 CocoAlma is an _execution-aware_ tool for formal verification of masked implementations.
