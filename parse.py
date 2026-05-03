@@ -81,7 +81,15 @@ def create_yosys_script(args):
     with open(TEMPLATE_FILE_PATH) as template_file:
         yosys_script += template_file.read()
     assert("{READ_FILES}" in yosys_script)
-    read_verilog_commands = "\n".join(["read_verilog %s;" % os.path.abspath(f) for f in args.verilog_file_paths]) + "\n"
+    # 定义允许的文件后缀列表
+    allowed_suffixes = ['.v']  # 根据需要修改
+
+    # 过滤文件路径，只保留后缀在允许列表中的文件
+    filtered_files = [
+        f for f in args.verilog_file_paths 
+        if os.path.splitext(f)[1].lower() in allowed_suffixes
+    ]
+    read_verilog_commands = "\n".join(["read_verilog -defer %s;" % os.path.abspath(f) for f in filtered_files]) + "\n"
     yosys_script = yosys_script.replace("{READ_FILES}", read_verilog_commands)
     assert("{TOP_MODULE}" in yosys_script)
     yosys_script = yosys_script.replace("{TOP_MODULE}", args.top_module)

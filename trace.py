@@ -146,20 +146,23 @@ def trace_verilator(args):
     # Compile binary and run it
     include_paths = [obj_dir_path, defines.TEMPLATE_DIR, verilator_include_path]
     include_paths = ["-I" + _ for _ in include_paths]
-    cflags = ["-Wall", "-fno-diagnostics-color"]
+    cflags = ["-Wall", "-fno-diagnostics-color", "-DVL_THREADED=0"]
     simulation_sources = [
         args.tb_file_path, 
         "%s/V%s__ALL.a" % (obj_dir_path, raw_netlist_file_name),
         verilator_include_path + "/verilated.cpp",
-        verilator_include_path + "/verilated_vcd_c.cpp"]
+        verilator_include_path + "/verilated_vcd_c.cpp",
+        verilator_include_path + "/verilated_threads.cpp",  # ⭐ 新增
+    ]
     
 
     output_bin_path = defines.TMP_DIR + "/" + raw_netlist_file_name if args.output_bin_path == None else args.output_bin_path
 
     print(output_bin_path)
+    ldflags = ["-latomic"]  # ⭐ 新增
 
     compile_cmd = [[args.cxx_compiler], cflags, include_paths,
-                   simulation_sources, ["-o", output_bin_path]]    
+                   simulation_sources, ldflags, ["-o", output_bin_path]]    
     
     compile_cmd = sum(compile_cmd, [])  # Flatten compile command
     print(compile_cmd)
